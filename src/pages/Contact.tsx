@@ -20,14 +20,15 @@ export const Contact = () => {
 
     try {
       await emailjs.sendForm(
-        'service_cif8cnd',
-        'template_pbz3pgu',
+        'service_cif8cnd', // Asigură-te că acesta este ID-ul corect pentru serviciul tău EmailJS
+        'template_pbz3pgu', // Asigură-te că acesta este ID-ul șablonului tău EmailJS
         formRef.current,
-        'J2TBjdjWn1txU3btZ'
+        'J2TBjdjWn1txU3btZ' // Asigură-te că aceasta este cheia ta publică corectă
       );
       setSubmitted(true);
       formRef.current.reset();
     } catch (err) {
+      console.error("Eroare la trimiterea emailului:", err);
       setError(t('contact.form.error'));
     } finally {
       setIsSubmitting(false);
@@ -65,7 +66,7 @@ export const Contact = () => {
                 </label>
                 <input
                   type="text"
-                  name="user_name"
+                  name="from_name" // Actualizat pentru a corespunde cu șablonul
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
                 />
@@ -77,7 +78,7 @@ export const Contact = () => {
                 </label>
                 <input
                   type="email"
-                  name="user_email"
+                  name="from_email" // Actualizat pentru a corespunde cu șablonul
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
                 />
