@@ -21,7 +21,7 @@ export const Contact = () => {
     try {
       await emailjs.sendForm(
         'service_cif8cnd',
-        'service_cif8cnd',
+        'template_pbz3pgu',
         formRef.current,
         'J2TBjdjWn1txU3btZ'
       );
