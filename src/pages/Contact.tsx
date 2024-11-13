@@ -20,10 +20,10 @@ export const Contact = () => {
 
     try {
       await emailjs.sendForm(
-        'YOUR_SERVICE_ID',
-        'YOUR_TEMPLATE_ID',
+        'service_cif8cnd',
+        'service_cif8cnd',
         formRef.current,
-        'YOUR_PUBLIC_KEY'
+        'J2TBjdjWn1txU3btZ'
       );
       setSubmitted(true);
       formRef.current.reset();
