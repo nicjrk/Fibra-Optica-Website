@@ -13,14 +13,14 @@ export const translations = {
         intro: 'Wir bieten professionelle Installations- und Wartungsdienste für Glasfasernetze und elektrische Systeme.',
         about: {
           title: 'Über uns',
-          description: 'Unser erfahrenes Team bietet hochwertige Dienstleistungen im Bereich Glasfaser- und Elektroinstallationen.'
+          description: 'Wir sind ein engagiertes und erfahrenes Team, spezialisiert auf Glasfaser- und Elektroinstallationen. Wir bieten hochwertige Lösungen, die auf die Bedürfnisse unserer Kunden zugeschnitten sind, und gewährleisten Effizienz und Professionalität in jedem Projekt.'
         }
       },
       about: {
         title: 'Über uns',
         subtitle: 'Erfahrung und Expertise',
         experience: 'Mit über 10 Jahren Erfahrung',
-        description: 'Unser erfahrenes Team bietet hochwertige Dienstleistungen im Bereich Glasfaser- und Elektroinstallationen.',
+        description: 'Wir sind ein engagiertes und erfahrenes Team, spezialisiert auf Glasfaser- und Elektroinstallationen. Wir bieten hochwertige Lösungen, die auf die Bedürfnisse unserer Kunden zugeschnitten sind, und gewährleisten Effizienz und Professionalität in jedem Projekt.',
         history: {
           title: 'Unsere Geschichte',
           description: 'Seit unserer Gründung haben wir uns zu einem führenden Unternehmen entwickelt.'
@@ -112,6 +112,12 @@ export const translations = {
         address: {
           title: 'Adresse'
         }
+      },
+      footer: {
+        contactInfo: 'KONTAKTINFORMATIONEN',
+        email: 'Email',
+        phone: 'Telefon',
+        copyright: 'Veciunca Nicolae Vasile. Alle Rechte vorbehalten.'
       }
     }
   },
@@ -129,14 +135,14 @@ export const translations = {
         intro: 'Oferim servicii profesionale de instalare și întreținere pentru rețele de fibră optică și sisteme electrice.',
         about: {
           title: 'Despre noi',
-          description: 'Echipa noastră experimentată oferă servicii de înaltă calitate în domeniul instalațiilor de fibră optică și electrice.'
+          description: 'Suntem o echipă dedicată și experimentată, specializată în instalații de fibră optică și electrice. Oferim soluții de înaltă calitate, adaptate nevoilor clienților noștri, asigurând eficiență și profesionalism în fiecare proiect.'
         }
       },
       about: {
         title: 'Despre noi',
         subtitle: 'Experiență și expertiză',
         experience: 'Cu peste 10 ani de experiență',
-        description: 'Echipa noastră experimentată oferă servicii de înaltă calitate în domeniul instalațiilor de fibră optică și electrice.',
+        description: 'Suntem o echipă dedicată și experimentată, specializată în instalații de fibră optică și electrice. Oferim soluții de înaltă calitate, adaptate nevoilor clienților noștri, asigurând eficiență și profesionalism în fiecare proiect.',
         history: {
           title: 'Istoria noastră',
           description: 'De la înființare, am evoluat pentru a deveni o companie de top în domeniu.'
@@ -228,6 +234,12 @@ export const translations = {
         address: {
           title: 'Adresă'
         }
+      },
+      footer: {
+        contactInfo: 'INFORMAȚII DE CONTACT',
+        email: 'Email',
+        phone: 'Telefon',
+        copyright: 'Veciunca Nicolae Vasile. Toate drepturile rezervate.'
       }
     }
   }

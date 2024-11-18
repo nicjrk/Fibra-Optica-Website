@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Network, Zap, Wifi, Cable, Bolt, Wrench, Shield, ChevronDown, ChevronUp } from 'lucide-react';
-
+import { Network, Zap, Wifi, Wrench, Shield, ChevronDown, ChevronUp } from 'lucide-react';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+import UntitledImage from '../Poze/Untitled.png'; // Import imagine
+import UntitledImage2 from '../Poze/poza2.png'; // Import imagine
 interface ServiceCardProps {
   icon: React.ElementType;
   title: string;
   description: string;
   details: string[];
   color: string;
+  images: string[];
   isExpanded: boolean;
   onToggle: () => void;
 }
@@ -19,21 +23,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   description,
   details,
   color,
+  images,
   isExpanded,
   onToggle
 }) => {
+  const [lightboxOpen, setLightboxOpen] = useState(false); // Starea pentru a deschide Lightbox
+  const [currentImageIndex, setCurrentImageIndex] = useState(0); // Index-ul imaginii curente
+
   return (
-    <motion.div 
-      layout
-      className={`bg-white rounded-lg shadow-lg overflow-hidden`}
-    >
+    <motion.div layout className="bg-white rounded-lg shadow-lg overflow-hidden">
       <div className={`h-48 ${color} flex items-center justify-center`}>
         <Icon className="w-24 h-24 text-white" />
       </div>
       <div className="p-8">
         <h3 className="text-2xl font-semibold mb-4">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
-        
         <button
           onClick={onToggle}
           className="flex items-center text-blue-600 hover:text-blue-700 transition-colors"
@@ -66,6 +70,31 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                   </li>
                 ))}
               </ul>
+              <div className="grid grid-cols-2 gap-4 mt-4">
+                {images.map((imgSrc, index) => (
+                  <img
+                    key={index}
+                    src={imgSrc}
+                    alt={`Imagine serviciu ${index + 1}`}
+                    className="rounded-lg shadow-sm cursor-pointer"
+                    onClick={() => {
+                      setCurrentImageIndex(index); // Setează imaginea curentă
+                      setLightboxOpen(true); // Deschide Lightbox
+                    }}
+                  />
+                ))}
+              </div>
+
+              {/* Lightbox pentru galerie */}
+              {lightboxOpen && (
+                <Lightbox
+                  open={lightboxOpen}
+                  close={() => setLightboxOpen(false)} // Închide Lightbox
+                  slides={images.map((imgSrc) => ({ src: imgSrc }))} // Lista imaginilor
+                  currentIndex={currentImageIndex} // Indexul imaginii curente
+                  on={{ change: (index) => setCurrentImageIndex(index) }} // Actualizează indexul imaginii curente
+                />
+              )}
             </motion.div>
           )}
         </AnimatePresence>
@@ -84,29 +113,53 @@ export const Services = () => {
       title: t('services.fiber.title'),
       description: t('services.fiber.description'),
       details: t('services.fiber.details', { returnObjects: true }) as string[],
-      color: 'bg-gradient-to-r from-blue-500 to-blue-700'
+      images: [
+        UntitledImage, // Imagine importată
+        UntitledImage2, // Imagine importată
+        UntitledImage, // Imagine importată
+        UntitledImage2, // Imagine importată
+        UntitledImage, // Imagine importată
+        UntitledImage2, // Imagine importată
+        UntitledImage, // Imagine importată
+        UntitledImage2, // Imagine importată
+        UntitledImage, // Imagine importată
+        UntitledImage2, // Imagine importată
+      ],
+      color: 'bg-gradient-to-r from-blue-500 to-blue-700',
     },
     {
       icon: Zap,
       title: t('services.electrical.title'),
       description: t('services.electrical.description'),
       details: t('services.electrical.details', { returnObjects: true }) as string[],
-      color: 'bg-gradient-to-r from-yellow-500 to-red-500'
+      images: [
+        UntitledImage,
+        UntitledImage,
+      ],
+      color: 'bg-gradient-to-r from-yellow-500 to-red-500',
     },
     {
       icon: Wifi,
       title: t('services.network.title'),
       description: t('services.network.description'),
       details: t('services.network.details', { returnObjects: true }) as string[],
-      color: 'bg-gradient-to-r from-green-500 to-green-700'
+      images: [
+        UntitledImage,
+        UntitledImage,
+      ],
+      color: 'bg-gradient-to-r from-green-500 to-green-700',
     },
     {
       icon: Wrench,
       title: t('services.maintenance.title'),
       description: t('services.maintenance.description'),
       details: t('services.maintenance.details', { returnObjects: true }) as string[],
-      color: 'bg-gradient-to-r from-purple-500 to-purple-700'
-    }
+      images: [
+        UntitledImage,
+        UntitledImage,
+      ],
+      color: 'bg-gradient-to-r from-purple-500 to-purple-700',
+    },
   ];
 
   return (
@@ -123,7 +176,6 @@ export const Services = () => {
             {t('services.subtitle')}
           </p>
         </motion.div>
-        
         <div className="grid md:grid-cols-2 gap-8">
           {services.map((service, index) => (
             <ServiceCard
