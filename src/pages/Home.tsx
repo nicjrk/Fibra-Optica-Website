@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
+import UntitledImage from '../Poze/Untitled.png'; // Import imagine
+import Poza2 from '../Poze/poza2.png'; // Import imagine
 
 export const Home = () => {
   const { t } = useTranslation();
@@ -35,7 +37,7 @@ export const Home = () => {
           >
             <img
               loading="lazy"
-              src="/Poze/poza2.png" // Înlocuiește cu imaginea descriptivă corectă
+              src={Poza2} // Folosirea imaginii importate
               alt="Descriptive Image"
               className="w-full h-[60vh] object-cover rounded-lg shadow-lg"
             />
@@ -67,7 +69,7 @@ export const Home = () => {
             >
               <img
                 loading="lazy"
-                src="/src/Poze/Untitled.png"
+                src={UntitledImage} // Folosirea imaginii importate
                 alt="Company Project"
                 className="w-full h-full object-cover image-hover"
               />
@@ -82,7 +84,7 @@ export const Home = () => {
             >
               <img
                 loading="lazy"
-                src="/src/Poze/Untitled.png"
+                src={UntitledImage} // Folosirea imaginii importate
                 alt="Company Work"
                 className="w-full h-full object-cover image-hover"
               />
