@@ -35,7 +35,7 @@ export const Home = () => {
           >
             <img
               loading="lazy"
-              src="/src/Poze/Untitled.png" // Înlocuiește cu imaginea descriptivă corectă
+              src="/Poze/poza2.png" // Înlocuiește cu imaginea descriptivă corectă
               alt="Descriptive Image"
               className="w-full h-[60vh] object-cover rounded-lg shadow-lg"
             />
