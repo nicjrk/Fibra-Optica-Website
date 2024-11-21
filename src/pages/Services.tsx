@@ -1,40 +1,51 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Network, Zap, Wifi, Wrench, Shield, ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, Shield } from 'lucide-react'; // Import corect pentru iconițe
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
-import UntitledImage from '../Poze/Untitled.png'; // Import imagine
-import UntitledImage2 from '../Poze/poza2.png'; // Import imagine
+import Poza1 from '../Poze/Poza10.jpeg'; // Import imagine personalizată
+import Poza2 from '../Poze/Poza5.jpeg'; // Import imagine personalizată
+import Poza3 from '../Poze/Poza4.jpeg'; // Import imagine personalizată
+import Poza4 from '../Poze/Poza3.jpeg'; // Import imagine personalizată
+import PozaPavaj from '../Poze/Poza1.jpeg'; // Import imagine personalizată
+
 interface ServiceCardProps {
-  icon: React.ElementType;
+  images: string[]; // Lista de imagini pentru fiecare card
   title: string;
   description: string;
   details: string[];
   color: string;
-  images: string[];
   isExpanded: boolean;
   onToggle: () => void;
 }
 
 const ServiceCard: React.FC<ServiceCardProps> = ({
-  icon: Icon,
+  images,
   title,
   description,
   details,
   color,
-  images,
   isExpanded,
-  onToggle
+  onToggle,
 }) => {
-  const [lightboxOpen, setLightboxOpen] = useState(false); // Starea pentru a deschide Lightbox
-  const [currentImageIndex, setCurrentImageIndex] = useState(0); // Index-ul imaginii curente
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   return (
     <motion.div layout className="bg-white rounded-lg shadow-lg overflow-hidden">
-      <div className={`h-48 ${color} flex items-center justify-center`}>
-        <Icon className="w-24 h-24 text-white" />
-      </div>
+      <div
+        className={`h-48 ${color} flex items-center justify-center cursor-pointer`}
+        onClick={() => {
+          setLightboxOpen(true); // Deschide Lightbox-ul
+          setCurrentImageIndex(0); // Începe cu prima imagine din listă
+        }}
+        style={{
+          backgroundImage: `url(${images[0]})`, // Prima imagine ca fundal
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      ></div>
       <div className="p-8">
         <h3 className="text-2xl font-semibold mb-4">{title}</h3>
         <p className="text-gray-600 mb-4">{description}</p>
@@ -70,35 +81,21 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                   </li>
                 ))}
               </ul>
-              <div className="grid grid-cols-2 gap-4 mt-4">
-                {images.map((imgSrc, index) => (
-                  <img
-                    key={index}
-                    src={imgSrc}
-                    alt={`Imagine serviciu ${index + 1}`}
-                    className="rounded-lg shadow-sm cursor-pointer"
-                    onClick={() => {
-                      setCurrentImageIndex(index); // Setează imaginea curentă
-                      setLightboxOpen(true); // Deschide Lightbox
-                    }}
-                  />
-                ))}
-              </div>
-
-              {/* Lightbox pentru galerie */}
-              {lightboxOpen && (
-                <Lightbox
-                  open={lightboxOpen}
-                  close={() => setLightboxOpen(false)} // Închide Lightbox
-                  slides={images.map((imgSrc) => ({ src: imgSrc }))} // Lista imaginilor
-                  currentIndex={currentImageIndex} // Indexul imaginii curente
-                  on={{ change: (index) => setCurrentImageIndex(index) }} // Actualizează indexul imaginii curente
-                />
-              )}
             </motion.div>
           )}
         </AnimatePresence>
       </div>
+
+      {/* Lightbox pentru galerie */}
+      {lightboxOpen && (
+        <Lightbox
+          open={lightboxOpen}
+          close={() => setLightboxOpen(false)}
+          slides={images.map((imgSrc) => ({ src: imgSrc }))}
+          currentIndex={currentImageIndex}
+          on={{ change: (index) => setCurrentImageIndex(index) }}
+        />
+      )}
     </motion.div>
   );
 };
@@ -109,56 +106,32 @@ export const Services = () => {
 
   const services = [
     {
-      icon: Network,
+      images: [Poza1, Poza2, Poza1], // Lista de imagini pentru serviciu
       title: t('services.fiber.title'),
       description: t('services.fiber.description'),
       details: t('services.fiber.details', { returnObjects: true }) as string[],
-      images: [
-        UntitledImage, // Imagine importată
-        UntitledImage2, // Imagine importată
-        UntitledImage, // Imagine importată
-        UntitledImage2, // Imagine importată
-        UntitledImage, // Imagine importată
-        UntitledImage2, // Imagine importată
-        UntitledImage, // Imagine importată
-        UntitledImage2, // Imagine importată
-        UntitledImage, // Imagine importată
-        UntitledImage2, // Imagine importată
-      ],
       color: 'bg-gradient-to-r from-blue-500 to-blue-700',
     },
     {
-      icon: Zap,
-      title: t('services.electrical.title'),
-      description: t('services.electrical.description'),
-      details: t('services.electrical.details', { returnObjects: true }) as string[],
-      images: [
-        UntitledImage,
-        UntitledImage,
-      ],
-      color: 'bg-gradient-to-r from-yellow-500 to-red-500',
-    },
-    {
-      icon: Wifi,
+      images: [Poza3, Poza4], // Lista de imagini pentru serviciu
       title: t('services.network.title'),
       description: t('services.network.description'),
       details: t('services.network.details', { returnObjects: true }) as string[],
-      images: [
-        UntitledImage,
-        UntitledImage,
-      ],
       color: 'bg-gradient-to-r from-green-500 to-green-700',
     },
     {
-      icon: Wrench,
+      images: [Poza4], // Lista de imagini pentru serviciu
       title: t('services.maintenance.title'),
       description: t('services.maintenance.description'),
       details: t('services.maintenance.details', { returnObjects: true }) as string[],
-      images: [
-        UntitledImage,
-        UntitledImage,
-      ],
       color: 'bg-gradient-to-r from-purple-500 to-purple-700',
+    },
+    {
+      images: [PozaPavaj], // Lista de imagini pentru serviciul de pavaj
+      title: t('services.paving.title'),
+      description: t('services.paving.description'),
+      details: t('services.paving.details', { returnObjects: true }) as string[],
+      color: 'bg-gradient-to-r from-gray-600 to-gray-800',
     },
   ];
 

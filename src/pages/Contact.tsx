@@ -3,7 +3,10 @@ import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
+import ro from '../i18n/ro';
+import de from '../i18n/de';
 
+export const translations = { ro, de };
 export const Contact = () => {
   const { t } = useTranslation();
   const formRef = useRef<HTMLFormElement>(null);

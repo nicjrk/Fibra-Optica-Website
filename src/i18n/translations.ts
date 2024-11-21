@@ -17,13 +17,25 @@ export const translations = {
         }
       },
       about: {
+        
         title: 'Über uns',
-        subtitle: 'Erfahrung und Expertise',
-        experience: 'Mit über 10 Jahren Erfahrung',
-        description: 'Wir sind ein engagiertes und erfahrenes Team, spezialisiert auf Glasfaser- und Elektroinstallationen. Wir bieten hochwertige Lösungen, die auf die Bedürfnisse unserer Kunden zugeschnitten sind, und gewährleisten Effizienz und Professionalität in jedem Projekt.',
+        subtitle: 'Tieuban Dumitru - Ihr Partner für Glasfaser- und Pflasterarbeiten',
+        experience: 'Mit über 2 Jahren Erfahrung',
+        description: 
+          'Bei Tieuban Dumitru sind wir stolz darauf, ein junges und dynamisches Unternehmen zu sein, das seit 2 Jahren in Deutschland tätig ist. ' +
+          'Wir sind auf die Installation von Glasfaser und Pflasterarbeiten spezialisiert und haben uns durch Qualität, Professionalität und Kundenzufriedenheit schnell einen Namen gemacht. ' +
+          'Unser engagiertes Team bringt Erfahrung und Leidenschaft in jedes Projekt ein. Egal ob moderne Infrastruktur für Hochgeschwindigkeitsinternet oder ästhetische und langlebige Pflasterarbeiten - ' +
+          'wir garantieren höchste Standards bei jedem Auftrag. Vertrauen Sie uns, um Ihre Vision Wirklichkeit werden zu lassen!',
         history: {
           title: 'Unsere Geschichte',
-          description: 'Seit unserer Gründung haben wir uns zu einem führenden Unternehmen entwickelt.'
+          description: 'Seit unserer Gründung vor 2 Jahren haben wir uns durch Engagement, Qualität und Kundenorientierung einen Namen gemacht.'
+        },
+        projects: {
+          title: 'Unsere Projekte',
+          fiber: 'Glasfaserinstallation',
+          'fiber.description': 'Professionelle Installation und Wartung von Glasfasernetzen.',
+          paving: 'Pflasterarbeiten',
+          'paving.description': 'Verlegung und Reparatur von Pflastersteinen für Außenflächen.'
         },
         values: {
           title: 'Unsere Werte',
@@ -33,19 +45,6 @@ export const translations = {
           'quality.description': 'Wir setzen höchste Standards in allen unseren Projekten.',
           'sustainability.description': 'Nachhaltigkeit ist ein Kernwert unserer Arbeit.',
           'commitment.description': 'Wir sind engagiert für den Erfolg unserer Kunden.'
-        },
-        certifications: {
-          title: 'Zertifizierungen'
-        },
-        team: {
-          title: 'Unser Team',
-          description: 'Ein Team von Experten mit jahrelanger Erfahrung.',
-          'member1.name': 'Hans Schmidt',
-          'member1.position': 'Technischer Direktor',
-          'member2.name': 'Maria Weber',
-          'member2.position': 'Projektmanagerin',
-          'member3.name': 'Thomas Müller',
-          'member3.position': 'Installationsleiter'
         }
       },
       services: {
@@ -59,16 +58,6 @@ export const translations = {
             'Glasfaserkabelinstallation',
             'Spleißen und Testen',
             'Wartung und Reparatur'
-          ]
-        },
-        electrical: {
-          title: 'Elektrische Arbeiten',
-          description: 'Komplette elektrische Installationen und Wartung',
-          details: [
-            'Elektrische Installationen',
-            'Wartung und Reparaturen',
-            'Sicherheitsprüfungen',
-            'Notfalldienst'
           ]
         },
         network: {
@@ -89,6 +78,16 @@ export const translations = {
             '24/7 Support',
             'Leistungsüberwachung',
             'Systemoptimierung'
+          ]
+        },
+        paving: {
+          title: 'Pflasterarbeiten',
+          description: 'Professionelle Verlegung und Reparatur von Pflastersteinen für Ihre Außenflächen',
+          details: [
+            'Planung und Design des Pflasterlayouts',
+            'Verlegung von Pflastersteinen',
+            'Reparatur von beschädigten Bereichen',
+            'Reinigung und Pflege des Pflasters'
           ]
         }
       },
@@ -140,12 +139,23 @@ export const translations = {
       },
       about: {
         title: 'Despre noi',
-        subtitle: 'Experiență și expertiză',
-        experience: 'Cu peste 10 ani de experiență',
-        description: 'Suntem o echipă dedicată și experimentată, specializată în instalații de fibră optică și electrice. Oferim soluții de înaltă calitate, adaptate nevoilor clienților noștri, asigurând eficiență și profesionalism în fiecare proiect.',
+        subtitle: 'Tieuban Dumitru - Partenerul tău pentru fibră optică și pavaje',
+        experience: 'Cu peste 2 ani de experiență',
+        description: 
+          'La Tieuban Dumitru, suntem mândri să fim o companie tânără și dinamică, activă de 2 ani în Germania. ' +
+          'Specializați în instalarea de fibră optică și pavaje, ne-am construit rapid o reputație datorită calității, profesionalismului și satisfacției clienților noștri. ' +
+          'Echipa noastră dedicată aduce experiență și pasiune în fiecare proiect. Fie că este vorba de infrastructură modernă pentru internet de mare viteză sau de pavaje estetice și durabile, ' +
+          'garantăm cele mai înalte standarde în fiecare lucrare. Alegeți-ne pentru a transforma viziunea dumneavoastră în realitate!',
         history: {
           title: 'Istoria noastră',
-          description: 'De la înființare, am evoluat pentru a deveni o companie de top în domeniu.'
+          description: 'De la înființarea noastră acum 2 ani, am crescut prin dedicare, calitate și orientare către clienți.'
+        },
+        projects: {
+          title: 'Proiectele noastre',
+          fiber: 'Instalare fibră optică',
+          'fiber.description': 'Instalare și întreținere profesională a rețelelor de fibră optică.',
+          paving: 'Pavaje',
+          'paving.description': 'Servicii de instalare și reparații pentru pavaje, dedicate spațiilor exterioare.'
         },
         values: {
           title: 'Valorile noastre',
@@ -155,19 +165,6 @@ export const translations = {
           'quality.description': 'Menținem cele mai înalte standarde în toate proiectele noastre.',
           'sustainability.description': 'Sustenabilitatea este o valoare fundamentală în munca noastră.',
           'commitment.description': 'Suntem dedicați succesului clienților noștri.'
-        },
-        certifications: {
-          title: 'Certificări'
-        },
-        team: {
-          title: 'Echipa noastră',
-          description: 'O echipă de experți cu ani de experiență în domeniu.',
-          'member1.name': 'Ioan Popescu',
-          'member1.position': 'Director Tehnic',
-          'member2.name': 'Maria Ionescu',
-          'member2.position': 'Manager de Proiect',
-          'member3.name': 'Alexandru Popa',
-          'member3.position': 'Șef Instalații'
         }
       },
       services: {
@@ -181,16 +178,6 @@ export const translations = {
             'Instalare cabluri fibră optică',
             'Sudură și testare',
             'Mentenanță și reparații'
-          ]
-        },
-        electrical: {
-          title: 'Lucrări electrice',
-          description: 'Instalații electrice complete și întreținere',
-          details: [
-            'Instalații electrice',
-            'Mentenanță și reparații',
-            'Verificări de siguranță',
-            'Serviciu de urgență'
           ]
         },
         network: {
@@ -211,6 +198,16 @@ export const translations = {
             'Suport 24/7',
             'Monitorizare performanță',
             'Optimizare sistem'
+          ]
+        },
+        paving: {
+          title: 'Punerea și repararea pavajului',
+          description: 'Servicii profesionale de instalare și reparații pentru pavaj, pentru diverse tipuri de suprafețe exterioare',
+          details: [
+            'Proiectarea și planificarea pavajului',
+            'Instalarea plăcilor de pavaj',
+            'Repararea zonelor afectate sau deteriorate',
+            'Curățarea și întreținerea pavajului'
           ]
         }
       },
@@ -243,4 +240,5 @@ export const translations = {
       }
     }
   }
+  
 };
