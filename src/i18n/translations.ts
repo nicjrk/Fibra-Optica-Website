@@ -10,7 +10,7 @@ export const translations = {
         contact: 'Kontakt',
       },
       home: {
-        title: 'Willkommen bei Tiefbau Dumitru',
+        title: 'Herzlich willkommen bei Tiefbau Dumitru in Freiburg und Villingen-Schwenningen',
         subtitle: 'Ihr Partner für Glasfaser- und Elektroinstallationen',
         intro: 'Wir bieten professionelle Installations- und Wartungsdienste für Glasfasernetze und elektrische Systeme.',
         cta: 'Lassen Sie uns zusammenarbeiten',
