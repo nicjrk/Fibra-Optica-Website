@@ -17,7 +17,7 @@ export const Footer = () => {
         <div className="flex justify-center space-x-6 mt-4 mb-6">
           {/* Telefon */}
           <a
-            href="tel:" /* aici pui nr de tel */
+            href="tel:+00 40 (760) 178 159" /* aici pui nr de tel */
             className="text-white hover:text-gray-300 transition transform hover:scale-110"
             title="Telefon"
           >
@@ -25,7 +25,7 @@ export const Footer = () => {
           </a>
           {/* WhatsApp */}
           <a
-            href=""/* aici pui whatap ul */
+            href="https://wa.me/00 40 (760) 178 159"/* aici pui whatap ul */
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-gray-300 transition transform hover:scale-110"
@@ -33,19 +33,10 @@ export const Footer = () => {
           >
             <i className="fab fa-whatsapp fa-lg"></i>
           </a>
-          {/* TikTok */}
-          <a
-            href=""/* aici pui tiktok ul */
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-white hover:text-gray-300 transition transform hover:scale-110"
-            title="TikTok"
-          >
-            <i className="fab fa-tiktok fa-lg"></i>
-          </a>
+         
           {/* Email */}
           <a
-            href="mailto:" /* aici pui email ul */
+            href="mailto:dumitruvolosin185@gmail.com" /* aici pui email ul */
             className="text-white hover:text-gray-300 transition transform hover:scale-110"
             title="Email"
           >
@@ -63,14 +54,14 @@ export const Footer = () => {
           <p className="text-sm flex items-center justify-center gap-2">
             <i className="fas fa-envelope"></i>
             <span>
-              <strong>{t("footer.email")}:</strong> aici pui email ul
+              <strong>{t("footer.email")}:</strong> dumitruvolosin185@gmail.com
             </span>
           </p>
           {/* Telefon */}
           <p className="text-sm flex items-center justify-center gap-2 mt-2">
             <i className="fas fa-phone"></i>
             <span>
-              <strong>{t("footer.phone")}:</strong> aici pui nr
+              <strong>{t("footer.phone")}:</strong> 00 40 760 178 159
             </span>
           </p>
         </div>

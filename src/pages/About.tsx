@@ -2,9 +2,9 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Building2, Leaf, Shield, Heart } from 'lucide-react';
-import Poza1 from '../Poze/Poza1.jpeg'; // Imaginea importată local
-import Poza2 from '../Poze/Poza2.jpeg'; // A doua imagine importată local
-
+import Poza1 from '../Poze/Poza6.jpeg'; // Imaginea importată local
+import Poza2 from '../Poze/Poza9.jpeg'; // A doua imagine importată local
+import PozaEscavator from '../Poze/PozaEscavator4.jpeg';
 export const About = () => {
   const { t } = useTranslation();
 
@@ -51,7 +51,7 @@ export const About = () => {
             </div>
             <div className="w-full h-full md:h-[500px] rounded-lg overflow-hidden shadow-lg">
               <img
-                src={Poza1}
+                src={PozaEscavator}
                 alt="Company Activities"
                 className="w-full h-full object-cover"
               />

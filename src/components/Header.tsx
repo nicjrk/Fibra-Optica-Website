@@ -16,7 +16,7 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold">FiberTech Solutions</h1>
+            <h1 className="text-xl font-bold">Tieuban Dumitru</h1>
           </div>
           
           <nav className="hidden md:flex space-x-8">

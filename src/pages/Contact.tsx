@@ -151,8 +151,8 @@ export const Contact = () => {
                 <Phone className="w-6 h-6 text-blue-600 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg mb-1">{t('contact.phone.title')}</h3>
-                  <p className="text-gray-600">+40 123 456 789</p>
-                  <p className="text-gray-600">+40 987 654 321</p>
+                  <p className="text-gray-600">+00 40 760 178 159</p>
+                  
                 </div>
               </div>
               
@@ -160,8 +160,7 @@ export const Contact = () => {
                 <Mail className="w-6 h-6 text-blue-600 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg mb-1">{t('contact.email.title')}</h3>
-                  <p className="text-gray-600">contact@fibertech-solutions.com</p>
-                  <p className="text-gray-600">support@fibertech-solutions.com</p>
+                  <p className="text-gray-600">dumitruvolosin185@gmail.com</p>
                 </div>
               </div>
               
@@ -172,15 +171,6 @@ export const Contact = () => {
                   <p className="text-gray-600">Strada Principală 123</p>
                   <p className="text-gray-600">București, România</p>
                 </div>
-              </div>
-
-              {/* Map Placeholder */}
-              <div className="aspect-video rounded-lg overflow-hidden bg-gray-100">
-                <img 
-                  src="https://images.unsplash.com/photo-1553290322-0440b3457f0e?ixlib=rb-4.0.3"
-                  alt="Office Location"
-                  className="w-full h-full object-cover"
-                />
               </div>
             </div>
           </motion.div>

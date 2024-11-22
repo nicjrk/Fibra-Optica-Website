@@ -1,3 +1,5 @@
+import { Subtitles } from "lucide-react";
+
 export const translations = {
   de: {
     translation: {
@@ -8,7 +10,7 @@ export const translations = {
         contact: 'Kontakt',
       },
       home: {
-        title: 'Willkommen bei FiberTech Solutions',
+        title: 'Willkommen bei Tieuban Dumitru',
         subtitle: 'Ihr Partner für Glasfaser- und Elektroinstallationen',
         intro: 'Wir bieten professionelle Installations- und Wartungsdienste für Glasfasernetze und elektrische Systeme.',
         cta: 'Lassen Sie uns zusammenarbeiten',
@@ -54,17 +56,46 @@ export const translations = {
       },
       services: {
         title: 'Unsere Dienstleistungen',
+        subtitle: "We offer comprehensive solutions for every need",
         fiber: {
           title: 'Glasfaserinstallation',
           description: 'Professionelle Installation und Wartung von Glasfasernetzen',
+          details: [
+            'Netzwerkplanung und Design',
+            'Glasfaserkabelinstallation',
+            'Spleißen und Testen',
+            'Wartung und Reparatur',
+          ],
         },
         network: {
           title: 'Netzwerktechnik',
           description: 'Umfassende Netzwerklösungen',
+          details: [
+            'Netzwerkdesign',
+            'Konfiguration',
+            'Wartung',
+            'Sicherheit',
+          ],
+        },
+        maintenance: {
+          title: 'Wartungsservice',
+          description: 'Regelmäßige Wartung und Support',
+          details: [
+            'Präventive Wartung',
+            '24/7 Support',
+            'Leistungsüberwachung',
+            'Systemoptimierung',
+          ],
         },
         paving: {
           title: 'Pflasterarbeiten',
           description: 'Professionelle Verlegung und Reparatur von Pflastersteinen für Ihre Außenflächen',
+          details: [
+            'Planung und Beratung',
+            'Verlegung von Pflastersteinen',
+            'Reparaturen und Wartung',
+            'Gestaltung von Außenflächen',
+          ],
         },
         learnMore: 'Erfahren Sie mehr',
       },
@@ -106,7 +137,7 @@ export const translations = {
         contact: 'Contact',
       },
       home: {
-        title: 'Bun venit la FiberTech Solutions',
+        title: 'Bun venit la Tieuban Dumitru',
         subtitle: 'Partenerul dumneavoastră pentru instalații de fibră optică și electrice',
         intro: 'Oferim servicii profesionale de instalare și întreținere pentru rețele de fibră optică și sisteme electrice.',
         cta: 'Hai să colaborăm',
@@ -152,17 +183,46 @@ export const translations = {
       },
       services: {
         title: 'Serviciile noastre',
+        subtitle: "Oferim soluții complete pentru orice necesitate",
         fiber: {
           title: 'Instalare fibră optică',
           description: 'Instalare și întreținere profesională a rețelelor de fibră optică',
+          details: [
+            'Planificare și proiectare rețea',
+            'Instalare cabluri fibră optică',
+            'Sudură și testare',
+            'Mentenanță și reparații',
+          ],
         },
         network: {
           title: 'Tehnologie de rețea',
           description: 'Soluții complete de rețea',
+          details: [
+            'Design rețea',
+            'Configurare',
+            'Mentenanță',
+            'Securitate',
+          ],
+        },
+        maintenance: {
+          title: 'Servicii de mentenanță',
+          description: 'Întreținere regulată și suport',
+          details: [
+            'Mentenanță preventivă',
+            'Suport 24/7',
+            'Monitorizare performanță',
+            'Optimizare sistem',
+          ],
         },
         paving: {
           title: 'Pavaje',
           description: 'Servicii profesionale de instalare și reparații pentru pavaje, dedicate spațiilor exterioare',
+          details: [
+            'Planificare și consultanță',
+            'Instalare pavaje',
+            'Reparații și mentenanță',
+            'Design spații exterioare',
+          ],
         },
         learnMore: 'Află mai multe',
       },
