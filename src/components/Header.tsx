@@ -6,9 +6,16 @@ import { Globe, Menu, X } from 'lucide-react';
 export const Header = () => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  
+  const [buttonText, setButtonText] = useState('RO-DE'); // Stare inițială pentru butonul de limbă
+
   const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'ro' ? 'de' : 'ro');
+    if (i18n.language === 'ro') {
+      i18n.changeLanguage('de');
+      setButtonText('DE');
+    } else if (i18n.language === 'de') {
+      i18n.changeLanguage('ro');
+      setButtonText('RO');
+    }
   };
 
   return (
@@ -35,14 +42,16 @@ export const Header = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
+            {/* Buton pentru schimbarea limbii */}
             <button
               onClick={toggleLanguage}
               className="flex items-center space-x-2 px-3 py-1 rounded-md bg-blue-700 hover:bg-blue-600 transition"
             >
               <Globe size={20} />
-              <span>{i18n.language.toUpperCase()}</span>
+              <span>{buttonText}</span>
             </button>
 
+            {/* Buton pentru meniul mobil */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden"
@@ -52,7 +61,7 @@ export const Header = () => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Meniu mobil */}
         {isMenuOpen && (
           <nav className="md:hidden py-4 space-y-4">
             <NavLink
