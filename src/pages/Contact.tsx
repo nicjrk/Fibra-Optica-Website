@@ -151,7 +151,7 @@ export const Contact = () => {
                 <Phone className="w-6 h-6 text-blue-600 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg mb-1">{t('contact.phone.title')}</h3>
-                  <p className="text-gray-600">+00 40 760 178 159</p>
+                  <p className="text-gray-600">+040760178159</p>
                   
                 </div>
               </div>
