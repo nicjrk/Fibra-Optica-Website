@@ -1,4 +1,4 @@
-import { Subtitles } from "lucide-react";
+
 
 export const translations = {
   de: {
@@ -16,26 +16,25 @@ export const translations = {
         cta: 'Lassen Sie uns zusammenarbeiten',
         whyChooseUs: 'Warum uns wählen?',
         advantages: [
-          'Umfassende Erfahrung in der Branche',
-          'Garantierte Premium-Materialien',
-          'Professionelles Team',
-          'Erweiterte Garantie für die Arbeit',
+         'Erfahrung in der Region Freiburg und Villingen-Schwenningen',
+          'Premium-Materialien für langlebige Ergebnisse',
+          'Ein professionelles und engagiertes Team',
+          'Erweiterte Garantie auf alle Dienstleistungen',
         ],
         readyToStart: 'Bereit anzufangen?',
         requestQuote: 'Angebot anfordern',
       },
       about: {
         title: 'Über uns',
-        subtitle: 'Tieuban Dumitru - Ihr Partner für Glasfaser- und Pflasterarbeiten',
-        experience: 'Mit über 2 Jahren Erfahrung',
+        subtitle: 'Tiefbau Dumitru - Ihr Partner in Freiburg und Villingen-Schwenningen',
+        experience:  'Mit über 2 Jahren Erfahrung in Deutschland',
         description:
-          'Bei Tieuban Dumitru sind wir stolz darauf, ein junges und dynamisches Unternehmen zu sein, das seit 2 Jahren in Deutschland tätig ist. ' +
-          'Wir sind auf die Installation von Glasfaser und Pflasterarbeiten spezialisiert und haben uns durch Qualität, Professionalität und Kundenzufriedenheit schnell einen Namen gemacht. ' +
-          'Unser engagiertes Team bringt Erfahrung und Leidenschaft in jedes Projekt ein. Egal ob moderne Infrastruktur für Hochgeschwindigkeitsinternet oder ästhetische und langlebige Pflasterarbeiten - ' +
-          'wir garantieren höchste Standards bei jedem Auftrag. Vertrauen Sie uns, um Ihre Vision Wirklichkeit werden zu lassen!',
+          'Wir bei Tiefbau Dumitru sind stolz darauf, ein junges und dynamisches Unternehmen zu sein, das in Freiburg im Breisgau und Villingen-Schwenningen tätig ist. ' +
+          'Unsere Spezialisierungen umfassen Glasfaserinstallationen, Netzwerklösungen und Pflasterarbeiten, wobei wir auf Qualität, Professionalität und Kundenzufriedenheit setzen. ' +
+          'Unser Team bringt Erfahrung und Leidenschaft in jedes Projekt ein und garantiert höchste Standards. Vertrauen Sie uns, Ihre Vision zu realisieren!',
         history: {
           title: 'Unsere Geschichte',
-          description: 'Seit unserer Gründung vor 2 Jahren haben wir uns durch Engagement, Qualität und Kundenorientierung einen Namen gemacht.',
+          description: 'Seit unserer Gründung vor 2 Jahren haben wir uns auf hochwertige Dienstleistungen in Freiburg und Villingen-Schwenningen spezialisiert.',
         },
         projects: {
           title: 'Unsere Projekte',
@@ -55,11 +54,11 @@ export const translations = {
         },
       },
       services: {
-        title: 'Unsere Dienstleistungen',
-        subtitle: "We offer comprehensive solutions for every need",
+        title: 'Unsere Dienstleistungen in Freiburg und Villingen-Schwenningen',
+        subtitle: 'Umfassende Lösungen für jede Anforderung',
         fiber: {
           title: 'Glasfaserinstallation',
-          description: 'Professionelle Installation und Wartung von Glasfasernetzen',
+          description: 'Professionelle Glasfaserinstallationen und Netzwerklösungen in Freiburg und Villingen-Schwenningen.',
           details: [
             'Netzwerkplanung und Design',
             'Glasfaserkabelinstallation',
@@ -69,7 +68,7 @@ export const translations = {
         },
         network: {
           title: 'Netzwerktechnik',
-          description: 'Umfassende Netzwerklösungen',
+          description: 'Komplette Netzwerklösungen in Freiburg und Villingen-Schwenningen.',
           details: [
             'Netzwerkdesign',
             'Konfiguration',
@@ -79,7 +78,7 @@ export const translations = {
         },
         maintenance: {
           title: 'Wartungsservice',
-          description: 'Regelmäßige Wartung und Support',
+          description: 'Regelmäßige Wartung und Support für Projekte in Freiburg und Villingen-Schwenningen.',
           details: [
             'Präventive Wartung',
             '24/7 Support',
@@ -89,7 +88,7 @@ export const translations = {
         },
         paving: {
           title: 'Pflasterarbeiten',
-          description: 'Professionelle Verlegung und Reparatur von Pflastersteinen für Ihre Außenflächen',
+          description: 'Fachgerechte Verlegung und Reparatur von Pflastersteinen für Außenbereiche in Freiburg und Villingen-Schwenningen.',
           details: [
             'Planung und Beratung',
             'Verlegung von Pflastersteinen',
@@ -101,7 +100,7 @@ export const translations = {
       },
       contact: {
         title: 'Kontaktieren Sie uns',
-        subtitle: 'Wir sind hier, um Ihnen zu helfen',
+        subtitle: 'Ihr Partner in Freiburg und Villingen-Schwenningen',
         form: {
           name: 'Name',
           email: 'E-Mail',
@@ -137,39 +136,36 @@ export const translations = {
         contact: 'Contact',
       },
       home: {
-        title: 'Bun venit la Tiefbau Dumitru',
+        title: 'Bun venit la Tiefbau Dumitru în Freiburg și Villingen-Schwenningen',
         subtitle: 'Partenerul dumneavoastră pentru instalații de fibră optică și electrice',
-        intro: 'Oferim servicii profesionale de instalare și întreținere pentru rețele de fibră optică și sisteme electrice.',
+        intro:  'Oferim servicii profesionale de instalare și întreținere pentru fibră optică, sisteme electrice și pavaje în Freiburg și Villingen-Schwenningen.',
         cta: 'Hai să colaborăm',
         whyChooseUs: 'De ce să ne alegi?',
         advantages: [
-          'Experiență vastă în domeniu',
-          'Materiale premium garantate',
-          'Echipă profesionistă',
-          'Garanție extinsă pentru lucrări',
+         'Experiență vastă în Freiburg și Villingen-Schwenningen',
+          'Materiale premium garantate pentru proiecte durabile',
+          'Echipă profesionistă și dedicată',
+          'Garanție extinsă pentru toate serviciile',
         ],
         readyToStart: 'Pregătit să începem?',
         requestQuote: 'Solicită o ofertă',
       },
       about: {
         title: 'Despre noi',
-        subtitle: 'Tieuban Dumitru - Partenerul tău pentru fibră optică și pavaje',
+        subtitle:  'Tiefbau Dumitru - Servicii în Freiburg și Villingen-Schwenningen',
         experience: 'Cu peste 2 ani de experiență',
         description:
-          'La Tieuban Dumitru, suntem mândri să fim o companie tânără și dinamică, activă de 2 ani în Germania. ' +
-          'Specializați în instalarea de fibră optică și pavaje, ne-am construit rapid o reputație datorită calității, profesionalismului și satisfacției clienților noștri. ' +
-          'Echipa noastră dedicată aduce experiență și pasiune în fiecare proiect. Fie că este vorba de infrastructură modernă pentru internet de mare viteză sau de pavaje estetice și durabile, ' +
-          'garantăm cele mai înalte standarde în fiecare lucrare. Alegeți-ne pentru a transforma viziunea dumneavoastră în realitate!',
+          'Suntem o echipă activă în Freiburg și Villingen-Schwenningen, specializată în fibră optică, rețele și pavaje. Calitatea și satisfacția clienților sunt prioritare.',
         history: {
           title: 'Istoria noastră',
-          description: 'De la înființarea noastră acum 2 ani, am crescut prin dedicare, calitate și orientare către clienți.',
+          description: 'De 2 ani oferim soluții de calitate în Freiburg și Villingen-Schwenningen.',
         },
         projects: {
           title: 'Proiectele noastre',
           fiber: 'Instalare fibră optică',
-          'fiber.description': 'Instalare și întreținere profesională a rețelelor de fibră optică.',
+          'fiber.description': 'Servicii complete pentru fibră optică în Freiburg și Villingen-Schwenningen.',
           paving: 'Pavaje',
-          'paving.description': 'Servicii de instalare și reparații pentru pavaje, dedicate spațiilor exterioare.',
+          'paving.description': 'Pavaje estetice și funcționale pentru exterior.',
         },
         values: {
           title: 'Valorile noastre',
@@ -182,11 +178,11 @@ export const translations = {
         },
       },
       services: {
-        title: 'Serviciile noastre',
+        title: 'Serviciile noastre în Freiburg și Villingen-Schwenningen',
         subtitle: "Oferim soluții complete pentru orice necesitate",
         fiber: {
           title: 'Instalare fibră optică',
-          description: 'Instalare și întreținere profesională a rețelelor de fibră optică',
+          description: 'Instalare și mentenanță fibră optică în Freiburg și Villingen-Schwenningen',
           details: [
             'Planificare și proiectare rețea',
             'Instalare cabluri fibră optică',
@@ -196,7 +192,7 @@ export const translations = {
         },
         network: {
           title: 'Tehnologie de rețea',
-          description: 'Soluții complete de rețea',
+          description: 'Soluții complete de rețea ',
           details: [
             'Design rețea',
             'Configurare',

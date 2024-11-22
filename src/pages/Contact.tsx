@@ -168,8 +168,8 @@ export const Contact = () => {
                 <MapPin className="w-6 h-6 text-blue-600 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg mb-1">{t('contact.address.title')}</h3>
-                  <p className="text-gray-600">Strada Principală 123</p>
-                  <p className="text-gray-600">București, România</p>
+                  <p className="text-gray-600">Kirchstraße 2 
+                  79843 Löffingen</p>
                 </div>
               </div>
             </div>

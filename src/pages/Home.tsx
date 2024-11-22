@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
-import { CheckCircle, ArrowRight } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import Poza1 from '../Poze/Poza10.jpeg';
 import Poza2 from '../Poze/PozaEscavator1.jpeg';
 import Poza3 from '../Poze/Poza4.jpeg';
@@ -35,6 +35,8 @@ export const Home = () => {
       color: 'bg-gradient-to-r from-gray-600 to-gray-800',
     },
   ];
+
+  const advantages = t('home.advantages', { returnObjects: true }) as string[]; // Lista de avantaje
 
   return (
     <div className="flex-1">
@@ -116,6 +118,36 @@ export const Home = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Secțiunea "De Ce Să Ne Alegi" */}
+      <section className="py-20 bg-blue-600 text-white">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12">{t('home.whyChooseUs')}</h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {advantages.map((advantage, index) => (
+              <div key={index} className="flex items-center justify-center flex-col">
+                <CheckCircle className="w-10 h-10 mb-4 text-white" />
+                <p className="text-lg">{advantage}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
+ {/* Secțiunea "Pregătit să Începem?" */}
+ <section className="py-20 bg-white text-center">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            {t('home.readyToStart')}
+          </h2>
+          <Link
+            to="/contact"
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            {t('home.requestQuote')} <ArrowRight className="ml-2" />
+          </Link>
         </div>
       </section>
 
