@@ -19,13 +19,13 @@ export const Home = () => {
     {
       title: t('services.fiber.title'),
       description: t('services.fiber.description'),
-      images: [Poza1, Poza2, Poza1],
+      images: [Poza1],
       color: 'bg-gradient-to-r from-blue-500 to-blue-700',
     },
     {
       title: t('services.network.title'),
       description: t('services.network.description'),
-      images: [Poza3, Poza2],
+      images: [Poza3],
       color: 'bg-gradient-to-r from-green-500 to-green-700',
     },
     {

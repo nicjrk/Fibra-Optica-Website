@@ -10,7 +10,7 @@ export const translations = {
         contact: 'Kontakt',
       },
       home: {
-        title: 'Willkommen bei Tieuban Dumitru',
+        title: 'Willkommen bei Tiefbau Dumitru',
         subtitle: 'Ihr Partner für Glasfaser- und Elektroinstallationen',
         intro: 'Wir bieten professionelle Installations- und Wartungsdienste für Glasfasernetze und elektrische Systeme.',
         cta: 'Lassen Sie uns zusammenarbeiten',
@@ -137,7 +137,7 @@ export const translations = {
         contact: 'Contact',
       },
       home: {
-        title: 'Bun venit la Tieuban Dumitru',
+        title: 'Bun venit la Tiefbau Dumitru',
         subtitle: 'Partenerul dumneavoastră pentru instalații de fibră optică și electrice',
         intro: 'Oferim servicii profesionale de instalare și întreținere pentru rețele de fibră optică și sisteme electrice.',
         cta: 'Hai să colaborăm',
