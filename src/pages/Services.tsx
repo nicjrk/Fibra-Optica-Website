@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, ChevronUp, Shield } from 'lucide-react'; // Import corect pentru iconițe
-import Lightbox from 'yet-another-react-lightbox';
-import 'yet-another-react-lightbox/styles.css';
-import Poza1 from '../Poze/Poza10.jpeg'; // Import imagine personalizată
-import Poza2 from '../Poze/Poza5.jpeg'; // Import imagine personalizată
-import Poza3 from '../Poze/Poza4.jpeg'; // Import imagine personalizată
-import Poza4 from '../Poze/Poza3.jpeg'; // Import imagine personalizată
-import PozaPavaj from '../Poze/Poza1.jpeg'; // Import imagine personalizată
+import { ChevronDown, ChevronUp, Shield } from 'lucide-react';
+import Poza1 from '../Poze/Poza10.jpeg';
+import Poza2 from '../Poze/Poza5.jpeg';
+import Poza3 from '../Poze/Poza4.jpeg';
+import Poza4 from '../Poze/Poza3.jpeg';
+import PozaPavaj from '../Poze/Poza1.jpeg';
 
 interface ServiceCardProps {
-  images: string[]; // Lista de imagini pentru fiecare card
+  images: string[];
   title: string;
   description: string;
   details: string[];
@@ -29,19 +26,12 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
   isExpanded,
   onToggle,
 }) => {
-  const [lightboxOpen, setLightboxOpen] = useState(false);
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
   return (
     <motion.div layout className="bg-white rounded-lg shadow-lg overflow-hidden">
       <div
-        className={`h-48 ${color} flex items-center justify-center cursor-pointer`}
-        onClick={() => {
-          setLightboxOpen(true); // Deschide Lightbox-ul
-          setCurrentImageIndex(0); // Începe cu prima imagine din listă
-        }}
+        className={`h-48 ${color} flex items-center justify-center`}
         style={{
-          backgroundImage: `url(${images[0]})`, // Prima imagine ca fundal
+          backgroundImage: `url(${images[0]})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -55,11 +45,11 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         >
           {isExpanded ? (
             <>
-              Mai puțin <ChevronUp className="ml-2" />
+              Weniger <ChevronUp className="ml-2" />
             </>
           ) : (
             <>
-              Mai multe <ChevronDown className="ml-2" />
+              Mehr <ChevronDown className="ml-2" />
             </>
           )}
         </button>
@@ -85,52 +75,60 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           )}
         </AnimatePresence>
       </div>
-
-      {/* Lightbox pentru galerie */}
-      {lightboxOpen && (
-        <Lightbox
-          open={lightboxOpen}
-          close={() => setLightboxOpen(false)}
-          slides={images.map((imgSrc) => ({ src: imgSrc }))}
-          currentIndex={currentImageIndex}
-          on={{ change: (index) => setCurrentImageIndex(index) }}
-        />
-      )}
     </motion.div>
   );
 };
 
 export const Services = () => {
-  const { t } = useTranslation();
   const [expandedService, setExpandedService] = useState<number | null>(null);
 
   const services = [
     {
-      images: [Poza1, Poza2, Poza1], // Lista de imagini pentru serviciu
-      title: t('services.fiber.title'),
-      description: t('services.fiber.description'),
-      details: t('services.fiber.details', { returnObjects: true }) as string[],
+      images: [Poza1, Poza2, Poza1],
+      title: 'Glasfaserinstallation',
+      description: 'Professionelle Glasfaserinstallationen und Netzwerklösungen in Freiburg und Villingen-Schwenningen.',
+      details: [
+        'Netzwerkplanung und Design',
+        'Glasfaserkabelinstallation',
+        'Spleißen und Testen',
+        'Wartung und Reparatur',
+      ],
       color: 'bg-gradient-to-r from-blue-500 to-blue-700',
     },
     {
-      images: [Poza3, Poza4], // Lista de imagini pentru serviciu
-      title: t('services.network.title'),
-      description: t('services.network.description'),
-      details: t('services.network.details', { returnObjects: true }) as string[],
+      images: [Poza3, Poza4],
+      title: 'Netzwerktechnik',
+      description: 'Komplette Netzwerklösungen in Freiburg und Villingen-Schwenningen.',
+      details: [
+        'Netzwerkdesign',
+        'Konfiguration',
+        'Wartung',
+        'Sicherheit',
+      ],
       color: 'bg-gradient-to-r from-green-500 to-green-700',
     },
     {
-      images: [Poza4], // Lista de imagini pentru serviciu
-      title: t('services.maintenance.title'),
-      description: t('services.maintenance.description'),
-      details: t('services.maintenance.details', { returnObjects: true }) as string[],
+      images: [Poza4],
+      title: 'Wartungsservice',
+      description: 'Regelmäßige Wartung und Support für Projekte in Freiburg und Villingen-Schwenningen.',
+      details: [
+        'Präventive Wartung',
+        '24/7 Support',
+        'Leistungsüberwachung',
+        'Systemoptimierung',
+      ],
       color: 'bg-gradient-to-r from-purple-500 to-purple-700',
     },
     {
-      images: [PozaPavaj], // Lista de imagini pentru serviciul de pavaj
-      title: t('services.paving.title'),
-      description: t('services.paving.description'),
-      details: t('services.paving.details', { returnObjects: true }) as string[],
+      images: [PozaPavaj],
+      title: 'Pflasterarbeiten',
+      description: 'Fachgerechte Verlegung und Reparatur von Pflastersteinen für Außenbereiche in Freiburg und Villingen-Schwenningen.',
+      details: [
+        'Planung und Beratung',
+        'Verlegung von Pflastersteinen',
+        'Reparaturen und Wartung',
+        'Gestaltung von Außenflächen',
+      ],
       color: 'bg-gradient-to-r from-gray-600 to-gray-800',
     },
   ];
@@ -144,9 +142,9 @@ export const Services = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl font-bold mb-6">{t('services.title')}</h1>
+          <h1 className="text-4xl font-bold mb-6">Unsere Dienstleistungen in Freiburg und Villingen-Schwenningen</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {t('services.subtitle')}
+            Umfassende Lösungen für jede Anforderung
           </p>
         </motion.div>
         <div className="grid md:grid-cols-2 gap-8">

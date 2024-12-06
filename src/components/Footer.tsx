@@ -1,23 +1,19 @@
 import React from "react";
-import { useTranslation } from "react-i18next"; // Importăm funcția de traducere
-import "@fortawesome/fontawesome-free/css/all.min.css"; // Importăm Font Awesome
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
 export const Footer = () => {
-  const { t } = useTranslation(); // Funcție pentru traduceri
-
   const currentYear = new Date().getFullYear(); // Obține anul curent pentru copyright
 
   return (
     <footer className="bg-gradient-to-r from-[#1e3c72] to-[#2a5298] text-white py-8">
       {/* Container principal */}
-      
       <div className="container mx-auto px-4">
         {/* Secțiunea Iconițe Sociale */}
         <hr className="border-gray-400 opacity-50 mb-6" />
         <div className="flex justify-center space-x-6 mt-4 mb-6">
           {/* Telefon */}
           <a
-            href="tel:+040760178159" /* aici pui nr de tel */
+            href="tel:+040760178159"
             className="text-white hover:text-gray-300 transition transform hover:scale-110"
             title="Telefon"
           >
@@ -25,7 +21,7 @@ export const Footer = () => {
           </a>
           {/* WhatsApp */}
           <a
-            href="https://wa.me/40760178159"/* aici pui whatap ul */
+            href="https://wa.me/40760178159"
             target="_blank"
             rel="noopener noreferrer"
             className="text-white hover:text-gray-300 transition transform hover:scale-110"
@@ -33,10 +29,9 @@ export const Footer = () => {
           >
             <i className="fab fa-whatsapp fa-lg"></i>
           </a>
-         
           {/* Email */}
           <a
-            href="mailto:dumitruvolosin185@gmail.com" /* aici pui email ul */
+            href="mailto:dumitruvolosin185@gmail.com"
             className="text-white hover:text-gray-300 transition transform hover:scale-110"
             title="Email"
           >
@@ -47,21 +42,19 @@ export const Footer = () => {
         {/* Secțiunea cu informații de contact */}
         <div className="text-center mb-4">
           {/* Titlu */}
-          <h4 className="text-base font-semibold mb-2">
-            {t("footer.contactInfo")}
-          </h4>
+          <h4 className="text-base font-semibold mb-2">KONTAKTINFORMATIONEN</h4>
           {/* Email */}
           <p className="text-sm flex items-center justify-center gap-2">
             <i className="fas fa-envelope"></i>
             <span>
-              <strong>{t("footer.email")}:</strong> dumitruvolosin185@gmail.com
+              <strong>Email:</strong> dumitruvolosin185@gmail.com
             </span>
           </p>
           {/* Telefon */}
           <p className="text-sm flex items-center justify-center gap-2 mt-2">
             <i className="fas fa-phone"></i>
             <span>
-              <strong>{t("footer.phone")}:</strong> 0 40 760 178 159
+              <strong>Telefon:</strong> 0 40 760 178 159
             </span>
           </p>
         </div>
@@ -78,9 +71,9 @@ export const Footer = () => {
             rel="noopener noreferrer"
             className="hover:underline text-gray-300"
           >
-            
+            Veciunca Nicolae Vasile
           </a>
-          . {t("footer.copyright")}
+          . Alle Rechte vorbehalten.
         </div>
       </div>
     </footer>

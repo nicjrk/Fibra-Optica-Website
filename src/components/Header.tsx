@@ -1,105 +1,120 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import { Globe, Menu, X } from 'lucide-react';
+import { Phone, Menu, X } from 'lucide-react';
 
 export const Header = () => {
-  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [buttonText, setButtonText] = useState('RO-DE'); // Stare inițială pentru butonul de limbă
-
-  const toggleLanguage = () => {
-    if (i18n.language === 'ro') {
-      i18n.changeLanguage('de');
-      setButtonText('DE');
-    } else if (i18n.language === 'de') {
-      i18n.changeLanguage('ro');
-      setButtonText('RO');
-    }
-  };
 
   return (
     <header className="fixed w-full bg-[#003366] text-white shadow-lg z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold">Tieufbau Dumitru</h1>
+            <h1 className="text-xl font-bold">Tiefbau Dumitru</h1>
           </div>
-          
-          <nav className="hidden md:flex space-x-8">
-            <NavLink to="/" className={({ isActive }) => 
-              isActive ? "text-yellow-300" : "hover:text-yellow-300 transition"
-            }>{t('nav.home')}</NavLink>
-            <NavLink to="/about" className={({ isActive }) => 
-              isActive ? "text-yellow-300" : "hover:text-yellow-300 transition"
-            }>{t('nav.about')}</NavLink>
-            <NavLink to="/services" className={({ isActive }) => 
-              isActive ? "text-yellow-300" : "hover:text-yellow-300 transition"
-            }>{t('nav.services')}</NavLink>
-            <NavLink to="/contact" className={({ isActive }) => 
-              isActive ? "text-yellow-300" : "hover:text-yellow-300 transition"
-            }>{t('nav.contact')}</NavLink>
-          </nav>
 
-          <div className="flex items-center space-x-4">
-            {/* Buton pentru schimbarea limbii */}
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center space-x-2 px-3 py-1 rounded-md bg-blue-700 hover:bg-blue-600 transition"
-            >
-              <Globe size={20} />
-              <span>{buttonText}</span>
-            </button>
-
-            {/* Buton pentru meniul mobil */}
-            <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
-        </div>
-
-        {/* Meniu mobil */}
-        {isMenuOpen && (
-          <nav className="md:hidden py-4 space-y-4">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
             <NavLink
               to="/"
-              className={({ isActive }) => 
-                `block ${isActive ? "text-yellow-300" : "hover:text-yellow-300"}`
+              className={({ isActive }) =>
+                isActive ? "text-yellow-300" : "hover:text-yellow-300 transition"
               }
-              onClick={() => setIsMenuOpen(false)}
             >
-              {t('nav.home')}
+              Startseite
             </NavLink>
             <NavLink
               to="/about"
-              className={({ isActive }) => 
-                `block ${isActive ? "text-yellow-300" : "hover:text-yellow-300"}`
+              className={({ isActive }) =>
+                isActive ? "text-yellow-300" : "hover:text-yellow-300 transition"
               }
-              onClick={() => setIsMenuOpen(false)}
             >
-              {t('nav.about')}
+              Über uns
             </NavLink>
             <NavLink
               to="/services"
-              className={({ isActive }) => 
-                `block ${isActive ? "text-yellow-300" : "hover:text-yellow-300"}`
+              className={({ isActive }) =>
+                isActive ? "text-yellow-300" : "hover:text-yellow-300 transition"
               }
-              onClick={() => setIsMenuOpen(false)}
             >
-              {t('nav.services')}
+              Dienstleistungen
             </NavLink>
             <NavLink
               to="/contact"
-              className={({ isActive }) => 
+              className={({ isActive }) =>
+                isActive ? "text-yellow-300" : "hover:text-yellow-300 transition"
+              }
+            >
+              Kontakt
+            </NavLink>
+
+            {/* Call Button */}
+            <a
+              href="tel:+490123456789" // Înlocuiește cu numărul corect
+              className="flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition"
+            >
+              <Phone size={20} />
+              <span>Jetzt anrufen</span>
+            </a>
+          </nav>
+
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <nav className="md:hidden py-4 space-y-4 bg-[#003366] text-white">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
                 `block ${isActive ? "text-yellow-300" : "hover:text-yellow-300"}`
               }
               onClick={() => setIsMenuOpen(false)}
             >
-              {t('nav.contact')}
+              Startseite
             </NavLink>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                `block ${isActive ? "text-yellow-300" : "hover:text-yellow-300"}`
+              }
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Über uns
+            </NavLink>
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                `block ${isActive ? "text-yellow-300" : "hover:text-yellow-300"}`
+              }
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Dienstleistungen
+            </NavLink>
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `block ${isActive ? "text-yellow-300" : "hover:text-yellow-300"}`
+              }
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Kontakt
+            </NavLink>
+
+            {/* Call Button for Mobile */}
+            <a
+              href="tel:+040760178159" // Înlocuiește cu numărul corect
+              className="flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition"
+            >
+              <Phone size={20} />
+              <span>Jetzt anrufen</span>
+            </a>
           </nav>
         )}
       </div>

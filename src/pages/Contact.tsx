@@ -1,14 +1,9 @@
 import React, { useState, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { Phone, Mail, MapPin, Send, CheckCircle } from 'lucide-react';
-import ro from '../i18n/ro';
-import de from '../i18n/de';
 
-export const translations = { ro, de };
 export const Contact = () => {
-  const { t } = useTranslation();
   const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -23,16 +18,16 @@ export const Contact = () => {
 
     try {
       await emailjs.sendForm(
-        'service_cif8cnd', // Asigură-te că acesta este ID-ul corect pentru serviciul tău EmailJS
-        'template_pbz3pgu', // Asigură-te că acesta este ID-ul șablonului tău EmailJS
+        'service_cif8cnd',
+        'template_pbz3pgu',
         formRef.current,
-        'J2TBjdjWn1txU3btZ' // Asigură-te că aceasta este cheia ta publică corectă
+        'J2TBjdjWn1txU3btZ'
       );
       setSubmitted(true);
       formRef.current.reset();
     } catch (err) {
       console.error("Eroare la trimiterea emailului:", err);
-      setError(t('contact.form.error'));
+      setError("Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.");
     } finally {
       setIsSubmitting(false);
     }
@@ -48,8 +43,8 @@ export const Contact = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl font-bold mb-6">{t('contact.title')}</h1>
-          <p className="text-xl max-w-3xl mx-auto">{t('contact.subtitle')}</p>
+          <h1 className="text-4xl font-bold mb-6">Kontaktieren Sie uns</h1>
+          <p className="text-xl max-w-3xl mx-auto">Ihr Partner in Freiburg und Villingen-Schwenningen</p>
         </motion.div>
       </div>
 
@@ -65,11 +60,11 @@ export const Contact = () => {
             <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('contact.form.name')}
+                  Name
                 </label>
                 <input
                   type="text"
-                  name="from_name" // Actualizat pentru a corespunde cu șablonul
+                  name="from_name"
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
                 />
@@ -77,11 +72,11 @@ export const Contact = () => {
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('contact.form.email')}
+                  E-Mail
                 </label>
                 <input
                   type="email"
-                  name="from_email" // Actualizat pentru a corespunde cu șablonul
+                  name="from_email"
                   required
                   className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
                 />
@@ -89,7 +84,7 @@ export const Contact = () => {
               
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  {t('contact.form.message')}
+                  Nachricht
                 </label>
                 <textarea
                   name="message"
@@ -111,7 +106,7 @@ export const Contact = () => {
                 ) : (
                   <>
                     <Send className="w-5 h-5 mr-2" />
-                    {t('contact.form.submit')}
+                    Senden
                   </>
                 )}
               </button>
@@ -124,7 +119,7 @@ export const Contact = () => {
                 className="mt-4 p-4 bg-green-100 text-green-700 rounded-md flex items-center"
               >
                 <CheckCircle className="w-5 h-5 mr-2" />
-                {t('contact.form.success')}
+                Vielen Dank für Ihre Nachricht. Wir werden uns bald bei Ihnen melden.
               </motion.div>
             )}
 
@@ -150,16 +145,15 @@ export const Contact = () => {
               <div className="flex items-start space-x-4">
                 <Phone className="w-6 h-6 text-blue-600 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">{t('contact.phone.title')}</h3>
+                  <h3 className="font-semibold text-lg mb-1">Telefon</h3>
                   <p className="text-gray-600">+040760178159</p>
-                  
                 </div>
               </div>
               
               <div className="flex items-start space-x-4">
                 <Mail className="w-6 h-6 text-blue-600 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">{t('contact.email.title')}</h3>
+                  <h3 className="font-semibold text-lg mb-1">E-Mail</h3>
                   <p className="text-gray-600">dumitruvolosin185@gmail.com</p>
                 </div>
               </div>
@@ -167,9 +161,8 @@ export const Contact = () => {
               <div className="flex items-start space-x-4">
                 <MapPin className="w-6 h-6 text-blue-600 mt-1" />
                 <div>
-                  <h3 className="font-semibold text-lg mb-1">{t('contact.address.title')}</h3>
-                  <p className="text-gray-600">Kirchstraße 2 
-                  79843 Löffingen</p>
+                  <h3 className="font-semibold text-lg mb-1">Adresse</h3>
+                  <p className="text-gray-600">Kirchstraße 2<br />79843 Löffingen</p>
                 </div>
               </div>
             </div>

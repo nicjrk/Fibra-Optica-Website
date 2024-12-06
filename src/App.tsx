@@ -6,11 +6,14 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Services } from './pages/Services';
 import { Contact } from './pages/Contact';
+import ScrollToTop from './i18n/ScrollToTop'; // Import ScrollToTop
 import './i18n/i18n';
 
 function App() {
   return (
     <BrowserRouter>
+      {/* ScrollToTop trebuie plasat aici */}
+      <ScrollToTop />
       <div className="min-h-screen flex flex-col bg-gray-50">
         <Header />
         <main className="flex-1 pt-16">

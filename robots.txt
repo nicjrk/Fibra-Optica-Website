@@ -1,0 +1,6 @@
+# Permite accesul pentru toate motoarele de căutare
+User-agent: *
+Allow: /
+
+# Specifică locația sitemap-ului
+Sitemap: https://www.tiefbau-dumitru.de/sitemap.xml
